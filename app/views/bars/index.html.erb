@@ -5,9 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Bar name</th>
-      <th>Bar address</th>
-      <th>Website</th>
+      <th>Bar</th>
+      <th>Address</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +16,6 @@
       <tr>
         <td><%= bar.bar_name %></td>
         <td><%= bar.bar_address %></td>
-        <td><%= bar.website %></td>
         <td><%= link_to 'Show', bar %></td>
         <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
         <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +26,6 @@
 
 <br>
 
+<%= link_to 'Back', homepage_path %>
+<br><br>
 <%= link_to 'New Bar', new_bar_path %>

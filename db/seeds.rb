@@ -71,3 +71,21 @@ Match.create!(
   away_team: "Manchester City",
   league: "Premier League"
 )
+
+Bar.create!(
+  bar_name: "The George Payne",
+  bar_address: "Plaça d'Urquinaona 5, 08010, Barcelona",
+  website: "http://www.thegeorgepayne.com/"
+)
+
+Bar.create!(
+  bar_name: "Flaherty's Irish Bar",
+  bar_address: "Plaza Joaquim Xirau, 08002, Barcelona",
+  website: "http://www.pflaherty.com/barcelona-home/"
+)
+
+Bar.create!(
+  bar_name: "Belushi's Bar",
+  bar_address: "Carrer de Bergara 3, 08002, Barcelona",
+  website: "http://www.belushis.com/bars/barcelona"
+)
