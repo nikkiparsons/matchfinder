@@ -1,0 +1,29 @@
+<%= form_for(@bar) do |f| %>
+  <% if @bar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+
+      <ul>
+      <% @bar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bar_name %><br>
+    <%= f.text_field :bar_name %>
+  </div>
+  <div class="field">
+    <%= f.label :bar_address %><br>
+    <%= f.text_area :bar_address %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
