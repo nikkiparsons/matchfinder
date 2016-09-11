@@ -4,6 +4,7 @@ class CreateMatches < ActiveRecord::Migration
       t.string :home_team
       t.string :away_team
       t.string :league
+      t.datetime :match_time
 
       t.timestamps null: false
     end

@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160911150920) do
     t.string   "home_team"
     t.string   "away_team"
     t.string   "league"
+    t.datetime "match_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
