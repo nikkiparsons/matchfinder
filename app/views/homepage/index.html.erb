@@ -1,4 +1,8 @@
-<p>I am the home page</p>
+<%= image_tag("Logo.png") %>
+
+<p>Welcome to Match finder. We help you find a local bar to watch your favorite sports.</p>
+
+<p>Which team are you looking to watch today?</p>
 
 <%= form_tag(matches_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search matches" %>

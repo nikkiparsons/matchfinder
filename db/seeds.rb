@@ -65,3 +65,9 @@ Match.create!(
   away_team: "Las Palmas",
   league: "La Liga"
 )
+
+Match.create!(
+  home_team: "Manchester Utd",
+  away_team: "Manchester City",
+  league: "Premier League"
+)
