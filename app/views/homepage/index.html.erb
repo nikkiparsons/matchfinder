@@ -8,3 +8,9 @@
   <%= text_field_tag :search, params[:search], placeholder: "Search matches" %>
   <%= submit_tag "Search", :name => nil %>
 <% end %>
+
+<br>
+<%= link_to 'All Matches', matches_path %>
+
+<br><br>
+<%= link_to 'All Bars', bars_path %>
