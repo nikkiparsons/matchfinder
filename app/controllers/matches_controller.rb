@@ -5,6 +5,11 @@ class MatchesController < ApplicationController
   # GET /matches.json
   def index
     @matches = Match.all
+    if params[:search]
+      @matches = Match.search(params[:search]).order("created_at DESC")
+    else
+      @matches = Match.all.order("created_at DESC")
+    end
   end
 
   # GET /matches/1

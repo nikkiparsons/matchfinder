@@ -1,0 +1,10 @@
+<p>I am the home page</p>
+
+<%= form_tag(matches_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search matches" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% if @matches.blank? %>
+  <h4>There are no matches containing the term <%= params[:search] %>.</h4>
+<% end %>
