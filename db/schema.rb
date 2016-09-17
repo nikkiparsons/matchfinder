@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160911150920) do
+ActiveRecord::Schema.define(version: 20160917095158) do
 
   create_table "bars", force: :cascade do |t|
     t.string   "bar_name"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20160911150920) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "bars_matches", id: false, force: :cascade do |t|
+    t.integer "bar_id",   null: false
+    t.integer "match_id", null: false
+  end
+
+  add_index "bars_matches", ["bar_id", "match_id"], name: "index_bars_matches_on_bar_id_and_match_id"
+  add_index "bars_matches", ["match_id", "bar_id"], name: "index_bars_matches_on_match_id_and_bar_id"
 
   create_table "matches", force: :cascade do |t|
     t.string   "home_team"
