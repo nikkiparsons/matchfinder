@@ -2,7 +2,7 @@
 
 <p>
   <strong>Bar name:</strong>
-  <%= @bar. bar_name %>
+  <%= @bar.bar_name %>
 </p>
 
 <p>
@@ -13,6 +13,15 @@
 <p>
   <strong>Website:</strong>
   <%= @bar.website %>
+</p>
+
+<p>
+  <strong>Matches the bar is showing:</strong>
+  <ul>
+    <% @bar.matches.each do |match| %>
+      <li><%= match.home_team %> vs. <%=match.away_team %></li>
+    <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_bar_path(@bar) %> |
