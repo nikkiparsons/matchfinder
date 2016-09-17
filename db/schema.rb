@@ -30,11 +30,4 @@ ActiveRecord::Schema.define(version: 20160911150920) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "matches_bars", id: false, force: :cascade do |t|
-    t.integer "matches_id"
-    t.integer "bar_id"
-  end
-
-  add_index "matches_bars", ["matches_id", "bar_id"], name: "index_matches_bars_on_matches_id_and_bar_id"
-
 end

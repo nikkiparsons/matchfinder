@@ -7,11 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 #MATCHES
-Match.create!(
+arsSouthMatch = Match.create!(
   home_team: "Arsenal",
   away_team: "Southampton",
   league: "Premier League",
   match_time: DateTime.strptime("10/09/2016 13:00", "%m/%d/%Y %H:%M")
+  #this should have a bars list
 )
 
 Match.create!(
@@ -86,7 +87,7 @@ Match.create!(
 
 #BARS
 
-Bar.create!(
+georgePayneBar = Bar.create!(
   bar_name: "The George Payne",
   bar_address: "Plaça d'Urquinaona 5, 08010, Barcelona",
   website: "http://www.thegeorgepayne.com/"
@@ -103,3 +104,5 @@ Bar.create!(
   bar_address: "Carrer de Bergara 3, 08002, Barcelona",
   website: "http://www.belushis.com/bars/barcelona"
 )
+
+# georgePayneBar.matches.create(match: arsSouthMatch)
