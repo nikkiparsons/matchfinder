@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Match Detail</h1>
+
 <p>
   <strong>Home team:</strong>
   <%= @match.home_team %>
@@ -22,12 +24,19 @@
 
 <p>
   <strong>Bars showing this match:</strong>
-  <ul>
-    <% @match.bars.each do |bar| %>
+  <% if @match.bars.blank? %>
+    <p>There are no bars currently scheduled to show this match.</p>
+    <p>Let's connect some!</p>
+  <% end %>
+
+  <% @match.bars.each do |bar| %>
+    <ul>
       <li><%= bar.bar_name %></li>
-    <% end %>
-  </ul>
+    </ul>
+  <% end %>
 </p>
+
+<br><br>
 
 <%= link_to 'Edit', edit_match_path(@match) %> |
 <%= link_to 'Back', matches_path %>
