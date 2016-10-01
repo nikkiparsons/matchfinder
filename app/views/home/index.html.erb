@@ -40,7 +40,9 @@
           <td>
             <% matches.each do |match| %>
               <ul>
-                <li><%= match.home_team %> vs. <%= match.away_team %></li>
+                <li>
+                  <%= link_to match.home_team + " vs. " + match.away_team, match %>
+                </li>
               </ul>
             <% end %>
           </td>
