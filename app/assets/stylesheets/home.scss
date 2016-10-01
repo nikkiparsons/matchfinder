@@ -2,10 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #header {
-  border: 3px solid black;
-  margin: 10px 10px 10px 10px;
   display: block;
   height: 154px;
+  background-color: #C0C0C0;
 }
 
 #logo {
@@ -14,7 +13,6 @@
 }
 
 #header p {
-  border: 1px solid black;
   float: left;
   display: inline-block;
 }
@@ -32,7 +30,6 @@
 }
 
 .search {
-  border: 3px solid black;
   margin: 10px 10px 10px 10px;
   display: block;
 }
@@ -53,7 +50,6 @@
 }
 
 #calendar {
-  border: 3px solid black;
   margin: 10px 10px 10px 10px;
   display: block;
   text-align: center;
