@@ -29,13 +29,13 @@
 
     <table id="calendar">
       <tr>
-        <th>Today</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-        <th>Saturday</th>
-        <th>Sunday</th>
+        <th><%= Date.today.strftime("%A") %></th>
+        <th><%= (Date.today+1).strftime("%A") %></th>
+        <th><%= (Date.today+2).strftime("%A") %></th>
+        <th><%= (Date.today+3).strftime("%A") %></th>
+        <th><%= (Date.today+4).strftime("%A") %></th>
+        <th><%= (Date.today+5).strftime("%A") %></th>
+        <th><%= (Date.today+6).strftime("%A") %></th>
       </tr>
       <tr>
         <td>
@@ -45,12 +45,48 @@
             </ul>
           <% end %>
         </td>
-        <td>Matches list here</td>
-        <td>Matches list here</td>
-        <td>Matches list here</td>
-        <td>Matches list here</td>
-        <td>Matches list here</td>
-        <td>Matches list here</td>
+        <td>
+          <% @todays2_matches.each do |match| %>
+            <ul>
+              <li><%= match.home_team %> vs. <%= match.away_team %></li>
+            </ul>
+          <% end %>
+        </td>
+        <td>
+          <% @todays3_matches.each do |match| %>
+            <ul>
+              <li><%= match.home_team %> vs. <%= match.away_team %></li>
+            </ul>
+          <% end %>
+        </td>
+        <td>
+          <% @todays4_matches.each do |match| %>
+            <ul>
+              <li><%= match.home_team %> vs. <%= match.away_team %></li>
+            </ul>
+          <% end %>
+        </td>
+        <td>
+          <% @todays5_matches.each do |match| %>
+            <ul>
+              <li><%= match.home_team %> vs. <%= match.away_team %></li>
+            </ul>
+          <% end %>
+        </td>
+        <td>
+          <% @todays6_matches.each do |match| %>
+            <ul>
+              <li><%= match.home_team %> vs. <%= match.away_team %></li>
+            </ul>
+          <% end %>
+        </td>
+        <td>
+          <% @todays7_matches.each do |match| %>
+            <ul>
+              <li><%= match.home_team %> vs. <%= match.away_team %></li>
+            </ul>
+          <% end %>
+        </td>
       </tr>
     </table>
   </div>

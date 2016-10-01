@@ -11,70 +11,70 @@ arsSouthMatch = Match.create!(
   home_team: "Arsenal",
   away_team: "Southampton",
   league: "Premier League",
-  match_time: DateTime.strptime("10/09/2016 13:00", "%m/%d/%Y %H:%M"),
+  match_time: DateTime.strptime("10/02/2016 13:00", "%m/%d/%Y %H:%M"),
 )
 
 bournWestMatch = Match.create!(
   home_team: "Bournemouth",
   away_team: "West Brom",
   league: "Premier League",
-  match_time: DateTime.strptime("10/09/2016 14:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/03/2016 14:00", "%m/%d/%Y %H:%M")
 )
 
 burnHullMatch = Match.create!(
   home_team: "Burnley",
   away_team: "Hull City",
   league: "Premier League",
-  match_time: DateTime.strptime("10/09/2016 14:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/04/2016 14:00", "%m/%d/%Y %H:%M")
 )
 
 middleCrystelMatch = Match.create!(
   home_team: "Middlesbrough",
   away_team: "Crystal Palace",
   league: "Premier League",
-  match_time: DateTime.strptime("10/09/2016 13:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/04/2016 13:00", "%m/%d/%Y %H:%M")
 )
 
 stokeSpursMatch = Match.create!(
   home_team: "Stoke",
   away_team: "Tottenham",
   league: "Premier League",
-  match_time: DateTime.strptime("10/09/2016 16:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/05/2016 16:00", "%m/%d/%Y %H:%M")
 )
 
 hammWatfMatch = Match.create!(
   home_team: "West Ham",
   away_team: "Watford",
   league: "Premier League",
-  match_time: DateTime.strptime("10/09/2016 16:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/06/2016 16:00", "%m/%d/%Y %H:%M")
 )
 
 liverLeiceMatch = Match.create!(
   home_team: "Liverpool",
   away_team: "Leicester",
   league: "Premier League",
-  match_time: DateTime.strptime("10/09/2016 18:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/07/2016 18:00", "%m/%d/%Y %H:%M")
 )
 
 vigoAtlMatch = Match.create!(
   home_team: "Celta Vigo",
   away_team: "Atletico Madrid",
   league: "La Liga",
-  match_time: DateTime.strptime("10/09/2016 18:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/07/2016 18:00", "%m/%d/%Y %H:%M")
 )
 
 rmOsasMatch = Match.create!(
   home_team: "Real Madrid",
   away_team: "Osasuna",
   league: "La Liga",
-  match_time: DateTime.strptime("10/09/2016 20:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/01/2016 20:00", "%m/%d/%Y %H:%M")
 )
 
 sevilPalmMatch = Match.create!(
   home_team: "Sevilla",
   away_team: "Las Palmas",
   league: "La Liga",
-  match_time: DateTime.strptime("10/09/2016 20:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/02/2016 20:00", "%m/%d/%Y %H:%M")
 )
 
 utdCityMatch = Match.create!(
