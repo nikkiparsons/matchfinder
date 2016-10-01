@@ -81,7 +81,7 @@ utdCityMatch = Match.create!(
   home_team: "Manchester Utd",
   away_team: "Manchester City",
   league: "Premier League",
-  match_time: DateTime.strptime("10/09/2016 18:00", "%m/%d/%Y %H:%M")
+  match_time: DateTime.strptime("10/1/2016 18:00", "%m/%d/%Y %H:%M")
 )
 
 #BARS

@@ -29,7 +29,7 @@
 
     <table id="calendar">
       <tr>
-        <th>Monday</th>
+        <th>Today</th>
         <th>Tuesday</th>
         <th>Wednesday</th>
         <th>Thursday</th>
@@ -38,7 +38,13 @@
         <th>Sunday</th>
       </tr>
       <tr>
-        <td>Matches list here</td>
+        <td>
+          <% @todays_matches.each do |match| %>
+            <ul>
+              <li><%= match.home_team %> vs. <%= match.away_team %></li>
+            </ul>
+          <% end %>
+        </td>
         <td>Matches list here</td>
         <td>Matches list here</td>
         <td>Matches list here</td>
