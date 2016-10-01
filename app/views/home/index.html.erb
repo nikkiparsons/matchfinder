@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% stylesheet_link_tag 'home' %>
+</head>
+
+<body>
+  <div id="header">
+    <%= image_tag("Logo.png", :id => "logo") %>
+  </div>
+
+  <div id="search">
+    <div id="search_bar"><p>Search bar goes here</p></div>
+    <%= image_tag("football_image.jpg", :class => "img-circle") %>
+    <%= image_tag("basketball_image.jpg", :class => "img-circle") %>
+    <%= image_tag("amfootball_image.jpg", :class => "img-circle") %>
+    <%= image_tag("baseball_image.png", :class => "img-circle") %>
+  </div>
+
+  <div id="calendar">
+    <p>Sports This Week | Change Location</p>
+    <%= image_tag("calendar_image.jpg", :id => "calendar_image") %>
+  </div>
+
+  <div id="footer">
+    <p>FOOTER</p>
+  </div>
+</body>
+
+</html>

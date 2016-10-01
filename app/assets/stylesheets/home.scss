@@ -1,0 +1,79 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#header {
+  border: 3px solid black;
+  margin: 10px 10px 10px 10px;
+  display: block;
+  height: 154px;
+}
+
+#logo {
+  height: 150px;
+  padding: 2px;
+}
+
+#header p {
+  border: 1px solid black;
+  float: left;
+  display: inline-block;
+}
+
+.login {
+  padding: 5px;
+  margin: 2px;
+  border: 1px dashed black;
+}
+
+#login_box {
+  position: relative;
+  float: right;
+  border: 1px solid black;
+}
+
+#search {
+  border: 3px solid black;
+  margin: 10px 10px 10px 10px;
+  display: block;
+}
+
+#search_bar {
+  border: 1px solid black;
+  margin: 2px;
+  padding: 2px;
+  text-align: center;
+  height: 45px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#calendar {
+  border: 3px solid black;
+  margin: 10px 10px 10px 10px;
+  display: block;
+  text-align: center;
+}
+
+#calendar_image {
+  height: 50%;
+  width: 50%;
+  padding: 10px;
+}
+
+#footer {
+  border: 3px solid black;
+  margin: 10px, 10px, 10px, 10px;
+  display: block;
+}
+
+#footer p {
+  text-align: center;
+}
