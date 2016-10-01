@@ -1,11 +1,10 @@
 class HomeController < ApplicationController
   def index
-    @todays_matches = Match.where("DATE(match_time) = ?", Date.today)
-    @todays2_matches = Match.where("DATE(match_time) = ?", Date.today+1)
-    @todays3_matches = Match.where("DATE(match_time) = ?", Date.today+2)
-    @todays4_matches = Match.where("DATE(match_time) = ?", Date.today+3)
-    @todays5_matches = Match.where("DATE(match_time) = ?", Date.today+4)
-    @todays6_matches = Match.where("DATE(match_time) = ?", Date.today+5)
-    @todays7_matches = Match.where("DATE(match_time) = ?", Date.today+6)
+    @days_of_week = []
+    @matches_by_day = []
+    for i in 0..6
+      @matches_by_day << Match.where("DATE(match_time) = ?", Date.today+i)
+      @days_of_week << (Date.today+i).strftime("%A")
+    end
   end
 end
