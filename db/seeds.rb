@@ -327,49 +327,72 @@ georgePayneBar = Bar.create!(
   bar_name: "The George Payne",
   bar_address: "Plaça d'Urquinaona 5, 08010, Barcelona",
   website: "http://www.thegeorgepayne.com/",
-  matches: [fraBulMatch, sloScoMatch, sloEngMatch, gerNorMatch]
+  matches: [fraBulMatch, sloScoMatch, sloEngMatch, gerNorMatch],
+  longitude: 2.172966699999961,
+  latitude: 41.3894965
 )
 
 Bar.create!(
   bar_name: "Flaherty's Irish Bar",
   bar_address: "Plaza Joaquim Xirau, 08002, Barcelona",
   website: "http://www.pflaherty.com/barcelona-home/",
-  matches: [fraBulMatch, sloSloMatch, engMalMatch]
+  matches: [fraBulMatch, sloSloMatch, engMalMatch],
+  longitude: 2.1763201999999637,
+  latitude: 41.3784405
 )
 
 Bar.create!(
   bar_name: "Belushi's Bar",
   bar_address: "Carrer de Bergara 3, 08002, Barcelona",
   website: "http://www.belushis.com/bars/barcelona",
-  matches: [engMalMatch, armRomMatch, gerCzeMatch]
+  matches: [engMalMatch, armRomMatch, gerCzeMatch],
+  longitude: 2.1676634000000377,
+  latitude: 41.38612099999999
 )
 
 Bar.create!(
   bar_name: "Grizzly 72 Sports Bar",
   bar_address: "Gran Via de les Corts Catalanes, 586, 08011 Barcelona",
   website: "https://www.facebook.com/G72.SB/",
-  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch]
+  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch],
+  longitude: 2.163021800000024,
+  latitude: 41.38496840000001
 )
 
 Bar.create!(
   bar_name: "McCarthy's Bar",
   bar_address: "Via Laietana, 44, 08003 Barcelona",
   website: "http://www.mccarthysbarbarcelona.com/",
-  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch]
+  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch],
+  longitude: 2.1759570000000394,
+  latitude: 41.3862145
 )
 
 Bar.create!(
   bar_name: "The Wild Rover Irish Pub",
   bar_address: "Carrer de Santa Mònica, 2, 08001 Barcelona",
   website: "http://www.wildroverbarcelona.com/",
-  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch]
+  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch],
+  longitude: 2.175273899999979,
+  latitude: 41.3774052
 )
 
 Bar.create!(
   bar_name: "Dunne's Irish Bar & Restaurant",
   bar_address: "Via Laietana, 19, 08003 Barcelona",
   website: "http://dunnesirishbar.com/index.html",
-  matches: [polArmMatch, sloEngMatch, gibBelMatch, czeAzeMatch]
+  matches: [polArmMatch, sloEngMatch, gibBelMatch, czeAzeMatch],
+  longitude: 2.1788133999999673,
+  latitude: 41.3836168
+)
+
+Bar.create!(
+  bar_name: "Sonora Sport Tavern",
+  bar_address: "Carrer de Pamplona, 96-104, 08018 Barcelona",
+  website: "https://www.facebook.com/tabernasonora/",
+  matches: [polArmMatch, sloEngMatch, gibBelMatch, czeAzeMatch, gerCzeMatch],
+  longitude: 2.1902999999999793,
+  latitude: 41.39773510000001
 )
 
 # georgePayneBar.matches.create(match: match)

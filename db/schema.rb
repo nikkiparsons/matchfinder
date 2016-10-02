@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20160917095158) do
     t.string   "bar_name"
     t.text     "bar_address"
     t.string   "website"
+    t.float    "longitude"
+    t.float    "latitude"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

@@ -4,6 +4,8 @@ class CreateBars < ActiveRecord::Migration
       t.string :bar_name
       t.text :bar_address
       t.string :website
+      t.float :longitude
+      t.float :latitude
 
       t.timestamps null: false
     end

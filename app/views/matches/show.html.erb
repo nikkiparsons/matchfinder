@@ -40,20 +40,7 @@
   <%= @match.match_time %>
 </p>
 
-<p>
-  <strong>Bars showing this match:</strong>
-  <% if @match.bars.blank? %>
-    <p>There are no bars currently scheduled to show this match.</p>
-  <% end %>
-
-  <% @match.bars.each do |bar| %>
-    <ul>
-      <li><%= link_to bar.bar_name, bar %></li>
-    </ul>
-  <% end %>
-</p>
-
-<br><br>
+<br>
 
 <p>Want to invite some friends to watch the match?</p>
 
@@ -62,6 +49,8 @@
 Tweet</a>
 
 <br><br>
+
+<h2>Find a Bar to watch it</h2>
 
 <div id="map"></div>
     <script>
@@ -103,6 +92,21 @@ Tweet</a>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=<%= @google_api_key %>&callback=initMap">
     </script>
+
+<br><br>
+
+<p>
+  <strong>Bars showing this match:</strong>
+  <% if @match.bars.blank? %>
+    <p>There are no bars currently scheduled to show this match.</p>
+  <% end %>
+
+  <% @match.bars.each do |bar| %>
+    <ul>
+      <li><%= link_to bar.bar_name, bar %></li>
+    </ul>
+  <% end %>
+</p>
 
 <br><br><br>
 
