@@ -21,13 +21,6 @@ luxSweMatch = Match.create!(
   match_time: DateTime.strptime("10/07/2016 20:45", "%m/%d/%Y %H:%M")
 )
 
-burnHullMatch = Match.create!(
-  home_team: "Burnley",
-  away_team: "Hull City",
-  league: "Premier League",
-  match_time: DateTime.strptime("10/04/2016 14:00", "%m/%d/%Y %H:%M")
-)
-
 netBelMatch = Match.create!(
   home_team: "Netherlands",
   away_team: "Belarus",

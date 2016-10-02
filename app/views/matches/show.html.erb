@@ -66,15 +66,37 @@ Tweet</a>
 <div id="map"></div>
     <script>
       function initMap() {
-        var barcelona = {lat: 41.387148, lng: 2.170122};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: barcelona
+          zoom: 14,
         });
-        var marker = new google.maps.Marker({
-          position: barcelona,
-          map: map
-        });
+      // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          var barcelona = {lat: 41.387148, lng: 2.170122};
+            map.setCenter(barcelona);
+          var marker = new google.maps.Marker({
+            position: barcelona,
+            map: map
+          });
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
       }
     </script>
 
