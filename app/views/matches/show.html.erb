@@ -37,5 +37,13 @@
 
 <br><br>
 
+<p>Want to invite some friends to watch the match?</p>
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=<%= "Watching #{@match.home_team} vs. #{@match.away_team} later today. Anyone else up for it? " %>" data-size="large">
+Tweet</a>
+
+<br><br><br>
+
 <%= link_to 'Edit', edit_match_path(@match) %> |
 <%= link_to 'All Matches', matches_path %>
