@@ -2,11 +2,42 @@
 <html>
 <head>
   <% stylesheet_link_tag 'home' %>
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    $(document).delegate('.open', 'click', function(event){
+      $(this).addClass('oppenned');
+      event.stopPropagation();
+    })
+    $(document).delegate('body', 'click', function(event) {
+      $('.open').removeClass('oppenned');
+    })
+    $(document).delegate('.cls', 'click', function(event){
+      $('.open').removeClass('oppenned');
+      event.stopPropagation();
+    });
+  });
+  </script>
+
 </head>
 
 <body>
   <div id="header">
-    <%= image_tag("Logo.png", :id => "logo") %>
+  <%= image_tag("Logo.png", :id => "logo") %>
+    <div class="open">
+      <span class="cls"></span>
+      <span>
+        <ul class="sub-menu ">
+          <li> <a href="#">Home</a> </li>
+          <li> <a href="#">Contact</a> </li>
+          <li> <a href="#">About</a> </li>
+          <li> <a href="#">Blog</a> </li>
+        </ul>
+      </span>
+      <span class="cls"></span>
+    </div>
   </div>
 
   <div>
@@ -17,12 +48,6 @@
         <%= text_field_tag :search, params[:search], placeholder: "Search matches" %>
         <%= submit_tag "Search", :name => nil %>
       <% end %>
-    </div>
-    <div class="search">
-      <%= image_tag("football_image.jpg", :class => "img-circle") %>
-      <%= image_tag("basketball_image.jpg", :class => "img-circle") %>
-      <%= image_tag("amfootball_image.jpg", :class => "img-circle") %>
-      <%= image_tag("baseball_image.png", :class => "img-circle") %>
     </div>
   </div>
 
