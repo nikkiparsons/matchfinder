@@ -30,7 +30,7 @@
 
   <% @match.bars.each do |bar| %>
     <ul>
-      <li><%= bar.bar_name %></li>
+      <li><%= link_to bar.bar_name, bar.website %></li>
     </ul>
   <% end %>
 </p>
@@ -40,7 +40,7 @@
 <p>Want to invite some friends to watch the match?</p>
 
 <a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet?text=<%= "Watching #{@match.home_team} vs. #{@match.away_team} later today. Anyone else up for it? " %>" data-size="large">
+  href="https://twitter.com/intent/tweet?text=<%= u "Watching #{@match.home_team} vs. #{@match.away_team} later today. Anyone else up for it? \#MatchFinder " %>" data-size="large">
 Tweet</a>
 
 <br><br><br>
