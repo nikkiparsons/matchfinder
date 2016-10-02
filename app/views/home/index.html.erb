@@ -3,43 +3,6 @@
 <head>
   <% stylesheet_link_tag 'home' %>
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-  <script>
-  $(document).ready(function() {
-    $(document).delegate('.open', 'click', function(event){
-      $(this).addClass('oppenned');
-      event.stopPropagation();
-    })
-    $(document).delegate('body', 'click', function(event) {
-      $('.open').removeClass('oppenned');
-    })
-    $(document).delegate('.cls', 'click', function(event){
-      $('.open').removeClass('oppenned');
-      event.stopPropagation();
-    });
-  });
-  </script>
-
-</head>
-
-<body>
-  <div id="header">
-  <%= image_tag("Logo.png", :id => "logo") %>
-    <div class="open">
-      <span class="cls"></span>
-      <span>
-        <ul class="sub-menu ">
-          <li> <a href="#">Home</a> </li>
-          <li> <a href="#">Contact</a> </li>
-          <li> <a href="#">About</a> </li>
-          <li> <a href="#">Blog</a> </li>
-        </ul>
-      </span>
-      <span class="cls"></span>
-    </div>
-  </div>
-
   <div>
     <p>Welcome to Match finder. We help you find a local bar to watch your favorite sports.</p>
     <p>Looking for a specific match?</p>
@@ -79,9 +42,6 @@
   </div>
 
   <div id="footer">
-    <%= link_to 'All Matches', matches_path %>
-    <br>
-    <%= link_to 'All Bars', bars_path %>
     <p>Ironhack Final project</p>
     <p>Made by Nikki Parsons</p>
 
