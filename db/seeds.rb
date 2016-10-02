@@ -351,4 +351,32 @@ Bar.create!(
   matches: [engMalMatch, armRomMatch, gerCzeMatch]
 )
 
+Bar.create!(
+  bar_name: "Grizzly 72 Sports Bar",
+  bar_address: "Gran Via de les Corts Catalanes, 586, 08011 Barcelona",
+  website: "https://www.facebook.com/G72.SB/",
+  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch]
+)
+
+Bar.create!(
+  bar_name: "McCarthy's Bar",
+  bar_address: "Via Laietana, 44, 08003 Barcelona",
+  website: "http://www.mccarthysbarbarcelona.com/",
+  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch]
+)
+
+Bar.create!(
+  bar_name: "The Wild Rover Irish Pub",
+  bar_address: "Carrer de Santa Mònica, 2, 08001 Barcelona",
+  website: "http://www.wildroverbarcelona.com/",
+  matches: [molRoiMatch, sloEngMatch, gibBelMatch, czeAzeMatch]
+)
+
+Bar.create!(
+  bar_name: "Dunne's Irish Bar & Restaurant",
+  bar_address: "Via Laietana, 19, 08003 Barcelona",
+  website: "http://dunnesirishbar.com/index.html",
+  matches: [polArmMatch, sloEngMatch, gibBelMatch, czeAzeMatch]
+)
+
 # georgePayneBar.matches.create(match: match)
