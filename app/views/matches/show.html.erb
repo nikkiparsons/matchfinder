@@ -61,6 +61,27 @@
   href="https://twitter.com/intent/tweet?text=<%= u "Watching #{@match.home_team} vs. #{@match.away_team} later today. Anyone else up for it? \#MatchFinder " %>" data-size="large">
 Tweet</a>
 
+<br><br>
+
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var barcelona = {lat: 41.387148, lng: 2.170122};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: barcelona
+        });
+        var marker = new google.maps.Marker({
+          position: barcelona,
+          map: map
+        });
+      }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=<%= @google_api_key %>&callback=initMap">
+    </script>
+
 <br><br><br>
 
 <%= link_to 'Edit', edit_match_path(@match) %> |

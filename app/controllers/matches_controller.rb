@@ -15,6 +15,7 @@ class MatchesController < ApplicationController
   # GET /matches/1
   # GET /matches/1.json
   def show
+    @google_api_key = ENV["GMAP_API_KEY"]
   end
 
   # GET /matches/new
