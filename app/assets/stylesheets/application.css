@@ -16,12 +16,12 @@
 
  #header {
    display: block;
-   height: 154px;
+   height: 104px;
    background-color: #C0C0C0;
  }
 
  #logo {
-   height: 150px;
+   height: 100px;
    padding: 2px;
  }
 
@@ -29,7 +29,7 @@
    float: left;
    display: inline-block;
  }
- 
+
  .open {
    position: fixed;
    top: 40px;
