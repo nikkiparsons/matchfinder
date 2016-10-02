@@ -74,13 +74,16 @@ Tweet</a>
           // Browser doesn't support Geolocation
           var barcelona = {lat: 41.387148, lng: 2.170122};
             map.setCenter(barcelona);
-          var marker = new google.maps.Marker({
-            position: barcelona,
-            map: map
-          });
         }
-      }
 
+        <% @match.bars.each do |bar| %>
+            var marker = new google.maps.Marker({
+              position: {lat: <%= bar.latitude %>, lng: <%= bar.longitude %> },
+              map: map
+            });
+        <% end %>
+        }
+        
       function handleLocationError(browserHasGeolocation, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
@@ -109,6 +112,3 @@ Tweet</a>
 </p>
 
 <br><br><br>
-
-<%= link_to 'Edit', edit_match_path(@match) %> |
-<%= link_to 'All Matches', matches_path %>
