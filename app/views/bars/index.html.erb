@@ -1,28 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bars</h1>
+<article id="main">
+  <header>
+    <h2>Bars</h2>
+    <p>Find the perfect place for a pint</p>
+  </header>
+  <section class="wrapper style5">
+    <div class="inner">
 
-<table>
-  <thead>
-    <tr>
-      <th>Bar</th>
-      <th>Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Bar</th>
+            <th>Address</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @bars.each do |bar| %>
-      <tr>
-        <td><%= bar.bar_name %></td>
-        <td><%= bar.bar_address %></td>
-        <td><%= link_to 'Show', bar %></td>
-        <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
-        <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @bars.each do |bar| %>
+            <tr>
+              <td><%= bar.bar_name %></td>
+              <td><%= bar.bar_address %></td>
+              <td><%= link_to 'Show', bar %></td>
+              <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
+              <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </section>
 
 <br>
 

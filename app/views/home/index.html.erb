@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <% stylesheet_link_tag 'home' %>
+<% stylesheet_link_tag 'home' %>
 
-  <div>
-    <p>Welcome to Match finder. We help you find a local bar to watch your favorite sports.</p>
-    <p>Looking for a specific match?</p>
-    <div id="search_bar" class="search">
-        <%= form_tag(matches_path, :method => "get") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search matches" %>
-        <%= submit_tag "Search", :name => nil %>
-      <% end %>
-    </div>
+<div>
+  <p>Welcome to Match finder. We help you find a local bar to watch your favorite sports.</p>
+  <p>Looking for a specific match?</p>
+  <div id="search_bar" class="search">
+      <%= form_tag(matches_path, :method => "get") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search matches" %>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
   </div>
+</div>
 
   <div id="calendar">
     <p><strong>Matches This Week</strong></p>
@@ -44,6 +41,3 @@
       </tbody>
     </table>
   </div>
-</body>
-
-</html>
