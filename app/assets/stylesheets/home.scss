@@ -39,21 +39,22 @@
   margin: 10px 10px 10px 10px;
   display: block;
   text-align: center;
+  height: 50%;
+  padding: 10px;
 }
 
-table, th, tr {
+th {
   border: 1px solid black;
   border-collapse: collapse;
 }
 
-th, td {
-  padding: 15px;
+thead {
+  background-color: #237FCF;
+  color: white;
 }
 
-
-#calendar {
-  height: 50%;
-  padding: 10px;
+th, td {
+  padding: 15px;
 }
 
 #footer {

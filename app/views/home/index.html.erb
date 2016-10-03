@@ -16,8 +16,9 @@
 
   <div id="calendar">
     <p><strong>Matches This Week</strong></p>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <table id="calendar">
+      <thead>
       <tr>
         <% @days_of_week.each do |day| %>
           <th>
@@ -25,6 +26,8 @@
           </th>
         <% end %>
       </tr>
+      </thead>
+      <tbody>
       <tr>
         <% @matches_by_day.each do |matches| %>
           <td>
@@ -38,6 +41,7 @@
           </td>
         <% end %>
       </tr>
+      </tbody>
     </table>
   </div>
 </body>
