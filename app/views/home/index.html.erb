@@ -1,43 +1,53 @@
-<% stylesheet_link_tag 'home' %>
-
-<div>
-  <p>Welcome to Match finder. We help you find a local bar to watch your favorite sports.</p>
-  <p>Looking for a specific match?</p>
+<section id="banner">
+  <div class="inner">
+    <h2>MatchFinder</h2>
+    <p>We help you find<br /> a local bar to watch<br /> your favorite sports.</p>
+  </div>
+  <a href="#one" class="more scrolly">Learn more</a>
+  <br><br><br>
+  <p>Looking for something specific?</p>
   <div id="search_bar" class="search">
       <%= form_tag(matches_path, :method => "get") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search matches" %>
-      <%= submit_tag "Search", :name => nil %>
+      <br>
+      <%= submit_tag "Search", :name => nil, :class => 'button special' %>
     <% end %>
   </div>
-</div>
+</header>
+</section>
 
-  <div id="calendar">
-    <p><strong>Matches This Week</strong></p>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <table id="calendar">
-      <thead>
-      <tr>
-        <% @days_of_week.each do |day| %>
-          <th>
-            <%= day %>
-          </th>
-        <% end %>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <% @matches_by_day.each do |matches| %>
-          <td>
-            <% matches.each do |match| %>
-              <ul>
-                <li>
-                  <%= link_to match.home_team + " vs. " + match.away_team, match %>
-                </li>
-              </ul>
-            <% end %>
-          </td>
-        <% end %>
-      </tr>
-      </tbody>
-    </table>
+<section id="one" class="wrapper style1 special">
+    <div class="inner">
+      <header class="major">
+        <h2>This Week's Matches</h2>
+        <div id="calendar">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <table id="calendar">
+            <thead>
+            <tr>
+              <% @days_of_week.each do |day| %>
+                <th>
+                  <%= day %>
+                </th>
+              <% end %>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <% @matches_by_day.each do |matches| %>
+                <td>
+                  <% matches.each do |match| %>
+                    <ul>
+                      <li>
+                        <%= link_to match.home_team + " vs. " + match.away_team, match %>
+                      </li>
+                    </ul>
+                  <% end %>
+                </td>
+              <% end %>
+            </tr>
+            </tbody>
+          </table>
+        </div>
   </div>
+</section>

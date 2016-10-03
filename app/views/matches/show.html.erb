@@ -1,4 +1,3 @@
-<!-- Figure out where to put this JS -->
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
@@ -18,97 +17,103 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Match Detail</h1>
+<article id="main">
+  <header>
+    <h2>Match Detail</h2>
+  <header>
+  <section class="wrapper style5">
+    <div class="inner">
+      <section>
+      <p>
+        <strong>Home team:</strong>
+        <%= @match.home_team %>
+      </p>
 
-<p>
-  <strong>Home team:</strong>
-  <%= @match.home_team %>
-</p>
+      <p>
+        <strong>Away team:</strong>
+        <%= @match.away_team %>
+      </p>
 
-<p>
-  <strong>Away team:</strong>
-  <%= @match.away_team %>
-</p>
+      <p>
+        <strong>League:</strong>
+        <%= @match.league %>
+      </p>
 
-<p>
-  <strong>League:</strong>
-  <%= @match.league %>
-</p>
-
-<p>
-  <strong>Match Date:</strong>
-  <%= @match.match_time %>
-</p>
+      <p>
+        <strong>Match Date:</strong>
+        <%= @match.match_time %>
+      </p>
 
 <br>
 
-<p>Want to invite some friends to watch the match?</p>
+      <p>Want to invite some friends to watch the match?</p>
 
-<a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet?text=<%= u "Watching #{@match.home_team} vs. #{@match.away_team} later today. Anyone else up for it? \#MatchFinder " %>" data-size="large">
-Tweet</a>
+      <a class="twitter-share-button"
+        href="https://twitter.com/intent/tweet?text=<%= u "Watching #{@match.home_team} vs. #{@match.away_team} later today. Anyone else up for it? \#MatchFinder " %>" data-size="large">
+      Tweet</a>
 
-<br><br>
+      <br><br>
 
-<h2>Find a Bar to watch it</h2>
+      <h3>Find a Bar to watch it</h3>
 
-<div id="map"></div>
-    <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-        });
-      // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+      <div id="map"></div>
+          <script>
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+              });
+            // Try HTML5 geolocation.
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                  var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                  };
 
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          var barcelona = {lat: 41.387148, lng: 2.170122};
-            map.setCenter(barcelona);
-        }
+                  map.setCenter(pos);
+                }, function() {
+                  handleLocationError(true, map.getCenter());
+                });
+              } else {
+                // Browser doesn't support Geolocation
+                var barcelona = {lat: 41.387148, lng: 2.170122};
+                  map.setCenter(barcelona);
+              }
+
+              <% @match.bars.each do |bar| %>
+                  var marker = new google.maps.Marker({
+                    position: {lat: <%= bar.latitude %>, lng: <%= bar.longitude %> },
+                    map: map
+                  });
+              <% end %>
+              }
+
+            function handleLocationError(browserHasGeolocation, pos) {
+              infoWindow.setPosition(pos);
+              infoWindow.setContent(browserHasGeolocation ?
+                                    'Error: The Geolocation service failed.' :
+                                    'Error: Your browser doesn\'t support geolocation.');
+            }
+          </script>
+
+          <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=<%= @google_api_key %>&callback=initMap">
+          </script>
+
+      <br><br>
+
+      <p>
+        <strong>Bars showing this match:</strong>
+        <% if @match.bars.blank? %>
+          <p>There are no bars currently scheduled to show this match.</p>
+        <% end %>
 
         <% @match.bars.each do |bar| %>
-            var marker = new google.maps.Marker({
-              position: {lat: <%= bar.latitude %>, lng: <%= bar.longitude %> },
-              map: map
-            });
+          <ul>
+            <li><%= link_to bar.bar_name, bar %></li>
+          </ul>
         <% end %>
-        }
-        
-      function handleLocationError(browserHasGeolocation, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
-    </script>
+      </p>
 
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=<%= @google_api_key %>&callback=initMap">
-    </script>
-
-<br><br>
-
-<p>
-  <strong>Bars showing this match:</strong>
-  <% if @match.bars.blank? %>
-    <p>There are no bars currently scheduled to show this match.</p>
-  <% end %>
-
-  <% @match.bars.each do |bar| %>
-    <ul>
-      <li><%= link_to bar.bar_name, bar %></li>
-    </ul>
-  <% end %>
-</p>
-
-<br><br><br>
+    </section>
+  </article>
