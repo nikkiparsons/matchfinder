@@ -89,6 +89,23 @@
                     map: map,
                     icon: markerImage
                   });
+
+                  var contentString = '<div class="info-window">' +
+                '<h3><%= bar.bar_name %></h3>' +
+                '<div class="info-content">' +
+                '<p><%= bar.bar_address %></p>' +
+                '<p><%= link_to 'Bar details', bar %></p> '
+                '</div>' +
+                '</div>';
+
+                  var infowindow = new google.maps.InfoWindow({
+                      content: contentString,
+                      maxWidth: 200
+                  });
+
+                  marker.addListener('click', function () {
+                      infowindow.open(map, marker);
+                  });
               <% end %>
               }
 
