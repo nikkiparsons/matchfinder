@@ -81,9 +81,13 @@
               }
 
               <% @match.bars.each do |bar| %>
+
+                  var markerImage = '/assets/football.png';
+
                   var marker = new google.maps.Marker({
                     position: {lat: <%= bar.latitude %>, lng: <%= bar.longitude %> },
-                    map: map
+                    map: map,
+                    icon: markerImage
                   });
               <% end %>
               }
