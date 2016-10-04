@@ -16,38 +16,44 @@
 </header>
 </section>
 
+<article id="main">
 <section id="one" class="wrapper style1 special">
     <div class="inner">
       <header class="major">
         <h2>This Week's Matches</h2>
-        <div id="calendar">
+        <div>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <table id="calendar">
-            <thead>
-            <tr>
-              <% @days_of_week.each do |day| %>
-                <th>
-                  <%= day %>
-                </th>
-              <% end %>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <% @matches_by_day.each do |matches| %>
-                <td>
-                  <% matches.each do |match| %>
-                    <ul>
-                      <li>
-                        <%= link_to match.home_team + " vs. " + match.away_team, match %>
-                      </li>
-                    </ul>
-                  <% end %>
-                </td>
-              <% end %>
-            </tr>
-            </tbody>
-          </table>
+          <section class="wrapper style5">
+            <div class="inner">
+            <table width="100%" id="home-cal">
+              <thead>
+              <tr width="(100/7)%">
+                <% @days_of_week.each do |day| %>
+                  <th>
+                    <%= day %>
+                  </th>
+                <% end %>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <% @matches_by_day.each do |matches| %>
+                  <td width="(100/7)%">
+                    <% matches.each do |match| %>
+                      <ul id="main-cal">
+                        <li class="home-cal">
+                          <%= link_to match.home_team + " vs. " + match.away_team, match %>
+                        </li>
+                      </ul>
+                    <% end %>
+                  </td>
+                <% end %>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          </section>
         </div>
   </div>
 </section>
+</article>

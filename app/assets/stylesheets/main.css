@@ -2308,7 +2308,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #237FCF;
+			background-color: #1761A0;
 			box-shadow: none !important;
 			color: #ffffff !important;
 		}
@@ -2318,7 +2318,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: ##237FCF !important;
+				background-color: #1761A0 !important;
 			}
 
 			input[type="submit"].special:active,
@@ -2641,7 +2641,7 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #237FCF;
+			background-color: #1761A0;
 			color: #c7ebe8;
 		}
 
@@ -3160,7 +3160,7 @@
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #237FCF;
+		background: #1761A0;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3812,3 +3812,7 @@
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+#main-cal {
+	list-style-type: none;
+}
