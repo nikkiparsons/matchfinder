@@ -10,30 +10,31 @@
       <section>
       	<h4>Sign up your bar</h4>
       	<form method="post" action="#">
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
       		<div class="row uniform">
       			<div class="6u 12u$(xsmall)">
-      				<input type="text" name="demo-name" id="demo-name" value="Name" placeholder="Name" />
+      				<input type="text" name="name" placeholder="Name" />
       			</div>
       			<div class="6u$ 12u$(xsmall)">
-      				<input type="email" name="demo-email" id="demo-email" value="Email" placeholder="Email" />
+      				<input type="email" name="email" placeholder="Email" />
       			</div>
             <div class="6u 12u$(xsmall)">
-              <input type="text" name="demo-name" id="demo-name" value="Bar" placeholder="Bar" />
+              <input type="text" name="bar" placeholder="Bar" />
             </div>
             <div class="6u 12u$(xsmall)">
-              <input type="text" name="demo-name" id="demo-name" value="Phone" placeholder="Phone" />
+              <input type="text" name="phone" placeholder="Phone" />
             </div>
       			<div class="12u$">
       				<div class="select-wrapper">
-      					<select name="demo-category" id="demo-category">
+      					<select multiple name="competition">
       						<option value="">- Competitions you typically show -</option>
-      						<option value="1">Premier League</option>
-      						<option value="1">La Liga</option>
-      						<option value="1">Bundesliga</option>
-      						<option value="1">Serie A</option>
-                  <option value="1">Ligue 1</option>
-                  <option value="1">European Championship</option>
-                  <option value="1">Internationals</option>
+      						<option value="Premier League">Premier League</option>
+      						<option value="La Liga">La Liga</option>
+      						<option value="Bundesliga">Bundesliga</option>
+      						<option value="Series A">Serie A</option>
+                  <option value="Ligue 1">Ligue 1</option>
+                  <option value="European Championships">European Championship</option>
+                  <option value="Internationals">Internationals</option>
       					</select>
       				</div>
       			</div>
@@ -58,7 +59,7 @@
       				<label for="demo-human">Not a robot</label>
       			</div>
       			<div class="12u$">
-      				<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+      				<textarea name="message" placeholder="Enter your message" rows="6"></textarea>
       			</div>
       			<div class="12u$">
       				<ul class="actions">
