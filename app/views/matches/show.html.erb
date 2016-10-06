@@ -19,11 +19,12 @@
 
 <article id="main">
   <header>
-    <h2>Match Detail</h2>
+    <h2><%= @match.home_team %> vs. <%= @match.away_team %></h2>
   <header>
   <section class="wrapper style5">
     <div class="inner">
       <section>
+      <h3>Match info</h3>
       <p>
         <strong>Home team:</strong>
         <%= @match.home_team %>
@@ -45,7 +46,7 @@
       </p>
 
 <br>
-
+      <h3>Share</h3>
       <p>Want to invite some friends to watch the match?</p>
 
       <a class="twitter-share-button"
