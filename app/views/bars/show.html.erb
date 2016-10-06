@@ -1,28 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Bar name:</strong>
-  <%= @bar.bar_name %>
-</p>
+<article id="main">
+  <header>
+    <h2><%= @bar.bar_name %></h2>
+  <header>
+  <section class="wrapper style5">
+    <div class="inner">
+      <section>
 
-<p>
-  <strong>Bar address:</strong>
-  <%= @bar.bar_address %>
-</p>
+        <h3>Bar Info</h3>
+        <p>
+          <strong>Address:</strong>
+          <%= @bar.bar_address %>
+        </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @bar.website %>
-</p>
+        <p>
+          Visit the bar's <%= link_to 'website', @bar.website %>
+        </p>
 
-<p>
-  <strong>Matches the bar is showing this week:</strong>
-  <ul>
-    <% @bar.matches.each do |match| %>
-      <li><%= match.home_team %> vs. <%=match.away_team %></li>
-    <% end %>
-  </ul>
-</p>
-
-<%= link_to 'Edit', edit_bar_path(@bar) %> |
-<%= link_to 'All Bars', bars_path %>
+        <br>
+        <p>
+          <h3>Matches the bar is showing this week:</h3>
+          <ul>
+            <% @bar.matches.each do |match| %>
+              <li id="main-cal"><%= match.home_team %> vs. <%=match.away_team %></li>
+            <% end %>
+          </ul>
+        </p>
+      </section>
+    </div>
+  </section>
+</article>
