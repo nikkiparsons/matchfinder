@@ -14,7 +14,7 @@
   			text-align: left;
   		}
 
-  td:nth-child(2n+1) {background: #CCC}
+  td:nth-child(2n+1) {background: #DCDCDC}
 
   td {
     font-size: 0.8em;
@@ -23,4 +23,8 @@
 
 #center-text {
   text-align: center;
+}
+
+#multi-select {
+  height: 135px;
 }
