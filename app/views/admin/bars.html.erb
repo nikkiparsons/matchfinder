@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<article id="main">
+  <header>
+    <h2>Admin Bar Page</h2>
+    <p><%= link_to 'Add New Bar', new_bar_path %></p>
+  </header>
+  <section class="wrapper style5">
+    <div class="inner">
+
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Bar</th>
+            <th>Address</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @bars.each do |bar| %>
+            <tr>
+              <td><%= bar.bar_name %></td>
+              <td><%= bar.bar_address %></td>
+              <td><%= link_to 'View', bar %></td>
+              <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
+              <td><%= link_to 'Delete', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </section>
+</article>

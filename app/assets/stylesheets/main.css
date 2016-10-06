@@ -3816,3 +3816,7 @@
 #main-cal {
 	list-style-type: none;
 }
+
+#twitter {
+		background-image: url("/assets/twitter_logo.png");
+}

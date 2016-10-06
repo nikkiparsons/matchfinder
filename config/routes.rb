@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/contact/new' => 'contact#new'
   post '/contact/new' => 'contact#record'
   get '/admin/contact/show' => 'contact#show'
+  get '/admin/bars/index' => 'admin#bars'
+  get '/admin/matches/index' => 'admin#matches'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
