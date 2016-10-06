@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get '' => 'home#index'
   get '/contact/new' => 'contact#new'
   post '/contact/new' => 'contact#record'
-  get '/contact/detail' => 'contact#detail'
   get '/admin/contact/show' => 'contact#show'
   get '/admin/contact/detail/:id' => 'contact#detail'
   get '/admin/bars/index' => 'admin#bars'

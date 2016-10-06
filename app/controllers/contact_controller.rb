@@ -8,7 +8,7 @@ class ContactController < ApplicationController
       bar: params[:bar],
       phone: params[:phone],
       email: params[:email],
-      competition: params[:competition],
+      competition: params[:competition].join(', '),
       message: params[:message]
     )
   end

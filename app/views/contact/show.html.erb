@@ -25,7 +25,7 @@
               <td><%= contact.name %></td>
               <td><%= contact.email %></td>
               <td><%= contact.phone %></td>
-              <td><%= link_to 'View', admin_contact_detail_path %></td>
+              <td><%= link_to 'View', '/admin/contact/detail/' + contact.id.to_s %></td>
             </tr>
           <% end %>
         </tbody>
