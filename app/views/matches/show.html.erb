@@ -42,9 +42,8 @@
 
       <p>
         <strong>Match Date:</strong>
-        <%= @match.match_time %>
+        <%= @match.match_time.strftime("%A, %B %d at %H:%M") %>
       </p>
-
 <br>
       <h3>Share</h3>
       <p>Want to invite some friends to watch the match?</p>
@@ -125,7 +124,7 @@
       <br><br>
 
       <p>
-        <strong>Bars showing this match:</strong>
+        <h3>Bars showing this match:</h3>
         <% if @match.bars.blank? %>
           <p>There are no bars currently scheduled to show this match.</p>
         <% end %>
